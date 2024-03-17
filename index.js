@@ -1,6 +1,13 @@
-function myFunction() {
-    a = 4;
+function temporary(){
+    let counter = 0;
 
+    return function(){
+        counter += 1;
+    }
 }
 
-myFunction();
+const add = temporary();
+
+add();
+
+console.dir(add);
